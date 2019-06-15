@@ -1,0 +1,1 @@
+export const NETWORK_INTERFACE = 'http://142.93.73.241:3000/graphql'; 
