@@ -7,15 +7,7 @@ import Cities from "../cities";
 import Promises from "../promises";
 import AboutUs from "../about-us";
 
-// import navigationService from "../navigation-services";
-
 class Home extends Component {
-  // componentDidMount() {
-  //   console.log(this.props.navigation);
-  //   navigationService.setNavigator(this.props.navigation);
-  //   console.log(navigationService._navigator);
-  // }
-
   render() {
     return (
       <View style={styles.container}>
