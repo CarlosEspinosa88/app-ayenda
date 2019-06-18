@@ -7,7 +7,7 @@ function Promises(props) {
       <View style={styles.centerContainer}>
         <Text style={styles.title}>Promesa Ayenda Hoteles</Text>
       </View>
-      <ScrollView horizontal>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View>
           <Image
             style={styles.promise}

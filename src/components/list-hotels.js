@@ -6,19 +6,14 @@ import {
   TouchableOpacity,
   ImageBackground
 } from "react-native";
-
 import { withNavigation } from "react-navigation";
-// import navigationService from "../components/navigation-services";
 
 class ListHotels extends Component {
-  handlePress = () => {
-    this.props.navigation.navigate("Show");
-    // navigationService.navigate("show");
+  handlePress = hotelId => {
+    this.props.navigation.navigate("Show", { hotelId: hotelId });
   };
 
   render() {
-    // console.log(navigationService._navigator.state);
-
     return (
       <View>
         {this.props.hotels.map(hotel => (
@@ -26,7 +21,9 @@ class ListHotels extends Component {
             key={hotel.id}
             activeOpacity={0.7}
             style={styles.wrapper}
-            onPress={this.handlePress}
+            onPress={() => {
+              this.handlePress(hotel.id);
+            }}
           >
             <View style={styles.image}>
               <ImageBackground
@@ -60,7 +57,6 @@ class ListHotels extends Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   wrapper: {
